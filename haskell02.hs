@@ -1,4 +1,4 @@
-import Data.List.Split (startsWith)
+temperaturaFebre :: Float -> Bool
 temperaturaFebre t = t > 37.8
 
 comFebre :: [Float] -> [Float]
@@ -11,7 +11,7 @@ itemize :: [String] -> [String]
 itemize = map (\s -> "<li>" ++ s ++ "</li>")
 
 bigCircles :: Float -> [Float] -> [Float]
-bigCircles max areas = filter (> max) areas
+bigCircles max = filter (> max)
 
 quarentena :: [(String,Float)] -> [(String,Float)]
 quarentena = filter (\(_, temperatura) -> temperaturaFebre temperatura)
